@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Box from '../../component/Box/Box'
 
-import './Gird.css'
+import './Grid.css'
 
 class Grid extends React.Component {
 
@@ -17,7 +18,7 @@ class Grid extends React.Component {
     		for (var j=0; j < this.props.cols; j++) {
     			let boxId = [i]+"_"+[j];
 
-    			boxClass = this.this.props.gridFull[i][j] ? "box on" : "box off";
+    			boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
 
     			rowArr.push(
     				<Box 
@@ -33,8 +34,8 @@ class Grid extends React.Component {
     	}
 
         return (
-            <div>
-                GRID
+            <div className="grid" style={{width : width}}>
+                {rowArr}
             </div>
         )
     }

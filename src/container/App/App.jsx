@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Grid from '../../container/Grid/Grid'
 
+import './App.css'
 
 class App extends React.Component {
     constructor() {
@@ -31,10 +31,6 @@ class App extends React.Component {
             </div>
         )
     }
-};
-
-App.PropTypes = {
-    generation : PropTypes.number
 };
 
 export default App;
