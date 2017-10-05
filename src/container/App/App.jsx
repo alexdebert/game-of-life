@@ -7,8 +7,14 @@ import Grid from '../../container/Grid/Grid'
 class App extends React.Component {
     constructor() {
         super();
+
+        this.speed = 100;
+        this.rows = 30;
+        this.cols = 50;
+
         this.state ={
-            generation : 0
+            generation : 0,
+            gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
         }
     }
 
@@ -16,9 +22,12 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Game of Life</h1>
-                <Grid />
+                <Grid 
+                    gridFull={this.state.gridFull}
+                    rows={this.rows}
+                    cols={this.cols}
+                    selectBox={this.selectBox} />
                 <h2>Generations: {this.state.generation}</h2>
-
             </div>
         )
     }

@@ -1,0 +1,11 @@
+.off {
+  background-color: lightgray;
+}
+
+.on {
+  background-color: green;
+}
+  
+.box:hover { 
+  background: #00CCFF;
+}

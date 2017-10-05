@@ -1,7 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Game of Life
-What is [Conway's of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)?
+What is [Conway's Game of life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)?
+
+## How to play?
+
+- Download the project
+- Run `npm install`
+- Run `npm start`
 
 ## Available Scripts
 
