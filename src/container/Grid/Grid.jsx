@@ -9,29 +9,29 @@ class Grid extends React.Component {
 
     render() {
 
-    	const width = (this.props.cols * 16);
-    	var rowArr = [];
+        const width = (this.props.cols * 14);
+        var rowArr = [];
 
-    	var boxClass = "";
+        var boxClass = "";
 
-    	for(var i=0; i < this.props.rows; i++) {
-    		for (var j=0; j < this.props.cols; j++) {
-    			let boxId = [i]+"_"+[j];
+        for (var i = 0; i < this.props.rows; i++) {
+            for (var j = 0; j < this.props.cols; j++) {
+                let boxId = [i] + "_" + [j];
 
-    			boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
+                boxClass = this.props.gridFull[i][j] ? "box on" : "box off";
 
-    			rowArr.push(
-    				<Box 
-    					boxClass = {boxClass}
-    					key = {boxId}
-    					boxId = {boxId}
-    					row = {i}
-    					col = {j}
-    					selectBox = {this.props.selectBox}
-    				/>
-    			)
-    		}
-    	}
+                rowArr.push(
+                    <Box
+                        boxClass={boxClass}
+                        key={boxId}
+                        boxId={boxId}
+                        row={i}
+                        col={j}
+                        selectBox={this.props.selectBox}
+                        />
+                )
+            }
+        }
 
         return (
             <div className="grid" style={{width : width}}>
@@ -42,8 +42,8 @@ class Grid extends React.Component {
 }
 
 Grid.PropTypes = {
-	cols : PropTypes.number,
-	rows : PropTypes.number
-}
+    cols: PropTypes.number,
+    rows: PropTypes.number
+};
 
 export default Grid;
